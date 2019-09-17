@@ -48,7 +48,39 @@ export default {
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
 
+  'menu.viper': '用户中心',
+  'menu.viper.list': '用户列表',
+  'menu.viper.card': '会员卡',
+
+  'menu.partner': '合伙人',
+  'menu.partner.add': '添加合伙人',
+  'menu.partner.list': '合伙人列表',
+
+  'menu.class': '课程中心',
+  'menu.class.classify': '课程分类',
+  'menu.class.support': '课程作者',
+  'menu.class.all': '全部课程',
+  'menu.class.before-verify': '待审核课程',
+
+  'menu.product': '商品中心',
+  'menu.product.classify': '商品分类',
+  'menu.product.support': '供应商',
+  'menu.product.all': '全部商品',
+  'menu.product.before-verify': '待审核商品',
+
   'menu.order': '订单',
   'menu.order.product': '商品订单',
   'menu.order.class': '课程订单',
+
+  'menu.finance': '财务',
+  'menu.finance.dashboard': '概览',
+  'menu.finance.teacher': '老师收入',
+  'menu.finance.partner': '合伙人收入',
+  'menu.finance.support': '供应商收入',
+  'menu.finance.withdraw': '提现记录',
+  'menu.finance.apply': '提现申请',
+
+  'menu.swiper': '轮播图',
+  'menu.swiper.add': '添加轮播图',
+  'menu.swiper.list': '轮播图列表',
 };

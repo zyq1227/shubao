@@ -309,6 +309,94 @@ export default {
               ],
             },
             {
+              name: 'viper',
+              icon: 'table',
+              path: '/viper',
+              routes: [
+                {
+                  name: 'list',
+                  path: '/viper/list',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'card',
+                  path: '/viper/card',
+                  component: './editor/mind',
+                }
+              ],
+            },
+            {
+              name: 'partner',
+              icon: 'user',
+              path: '/partner',
+              routes: [
+                {
+                  name: 'add',
+                  path: '/partner/add',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'list',
+                  path: '/partner/list',
+                  component: './editor/mind',
+                }
+              ],
+            },
+            {
+              name: 'class',
+              icon: 'form',
+              path: '/class',
+              routes: [
+                {
+                  name: 'classify',
+                  path: '/class/classify',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'support',
+                  path: '/class/support',
+                  component: './editor/mind',
+                },
+                {
+                  name: 'all',
+                  path: '/class/all',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'before-verify',
+                  path: '/class/beforeVerify',
+                  component: './editor/mind',
+                },
+              ],
+            },
+            {
+              name: 'product',
+              icon: 'profile',
+              path: '/product',
+              routes: [
+                {
+                  name: 'classify',
+                  path: '/product/classify',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'support',
+                  path: '/product/support',
+                  component: './editor/mind',
+                },
+                {
+                  name: 'all',
+                  path: '/product/all',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'before-verify',
+                  path: '/product/beforeVerify',
+                  component: './editor/mind',
+                },
+              ],
+            },
+            {
               name: 'order',
               icon: 'highlight',
               path: '/order',
@@ -321,6 +409,60 @@ export default {
                 {
                   name: 'class',
                   path: '/order/class',
+                  component: './editor/mind',
+                },
+              ],
+            },
+            {
+              name: 'finance',
+              icon: 'check-circle-o',
+              path: '/finance',
+              routes: [
+                {
+                  name: 'dashboard',
+                  path: '/finance/dashboard',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'teacher',
+                  path: '/finance/teacher',
+                  component: './editor/mind',
+                },
+                {
+                  name: 'partner',
+                  path: '/finance/partner',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'support',
+                  path: '/finance/support',
+                  component: './editor/mind',
+                },
+                {
+                  name: 'withdraw',
+                  path: '/finance/withdraw',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'apply',
+                  path: '/finance/apply',
+                  component: './editor/mind',
+                },
+              ],
+            },
+            {
+              name: 'swiper',
+              icon: 'warning',
+              path: '/swiper',
+              routes: [
+                {
+                  name: 'add',
+                  path: '/swiper/add',
+                  component: './editor/flow',
+                },
+                {
+                  name: 'list',
+                  path: '/swiper/list',
                   component: './editor/mind',
                 },
               ],
