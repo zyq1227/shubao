@@ -365,7 +365,7 @@ export default {
                 {
                   name: 'before-verify',
                   path: '/class/beforeVerify',
-                  component: './editor/mind',
+                  component: './class/verify',
                 },
               ],
             },
