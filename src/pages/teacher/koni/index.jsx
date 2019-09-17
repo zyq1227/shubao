@@ -1,41 +1,42 @@
 import { Col, Row } from 'antd';
-import GGEditor, { Flow } from 'gg-editor';
+import GGEditor, { Koni } from 'gg-editor';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import React from 'react';
 import { formatMessage } from 'umi-plugin-react/locale';
 import EditorMinimap from './components/EditorMinimap';
-import { FlowContextMenu } from './components/EditorContextMenu';
-import { FlowDetailPanel } from './components/EditorDetailPanel';
-import { FlowItemPanel } from './components/EditorItemPanel';
-import { FlowToolbar } from './components/EditorToolbar';
+import { KoniContextMenu } from './components/EditorContextMenu';
+import { KoniDetailPanel } from './components/EditorDetailPanel';
+import { KoniItemPanel } from './components/EditorItemPanel';
+import { KoniToolbar } from './components/EditorToolbar';
 import styles from './index.less';
 
 GGEditor.setTrackable(false);
 export default () => (
   <PageHeaderWrapper
     content={formatMessage({
-      id: 'editor-flow.description',
+      id: 'editor-koni.description',
       defaultMessage: 'description',
     })}
   >
     <GGEditor className={styles.editor}>
       <Row type="flex" className={styles.editorHd}>
         <Col span={24}>
-          <FlowToolbar />
+          <KoniToolbar />
         </Col>
       </Row>
       <Row type="flex" className={styles.editorBd}>
-        <Col span={4} className={styles.editorSidebar}>
-          <FlowItemPanel />
+        <Col span={2} className={styles.editorSidebar}>
+          <KoniItemPanel />
         </Col>
         <Col span={16} className={styles.editorContent}>
-          <Flow className={styles.flow} />
+          <Koni className={styles.koni} />
         </Col>
-        <Col span={4} className={styles.editorSidebar}>
-          <FlowDetailPanel />
+        <Col span={6} className={styles.editorSidebar}>
+          <KoniDetailPanel />
           <EditorMinimap />
         </Col>
       </Row>
-      <FlowContextMenu />
+      <KoniContextMenu />
     </GGEditor>
   </PageHeaderWrapper>
 );

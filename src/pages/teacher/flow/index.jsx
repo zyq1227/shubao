@@ -1,5 +1,6 @@
 import { Col, Row } from 'antd';
 import GGEditor, { Flow } from 'gg-editor';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import React from 'react';
 import { formatMessage } from 'umi-plugin-react/locale';
 import EditorMinimap from './components/EditorMinimap';
@@ -31,11 +32,11 @@ export default () => (
           <Flow className={styles.flow} />
         </Col>
         <Col span={4} className={styles.editorSidebar}>
-          <FlowDetailPanel />
-          <EditorMinimap />
+          {/* <FlowDetailPanel /> */}
+          {/* <EditorMinimap /> */}
         </Col>
       </Row>
-      <FlowContextMenu />
+      {/* <FlowContextMenu /> */}
     </GGEditor>
   </PageHeaderWrapper>
 );

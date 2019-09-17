@@ -322,7 +322,7 @@ export default {
                   name: 'card',
                   path: '/viper/card',
                   component: './editor/mind',
-                }
+                },
               ],
             },
             {
@@ -339,7 +339,7 @@ export default {
                   name: 'list',
                   path: '/partner/list',
                   component: './editor/mind',
-                }
+                },
               ],
             },
             {
@@ -409,7 +409,7 @@ export default {
                 {
                   name: 'class',
                   path: '/order/class',
-                  component: './editor/mind',
+                  component: './order/class',
                 },
               ],
             },
@@ -426,27 +426,27 @@ export default {
                 {
                   name: 'teacher',
                   path: '/finance/teacher',
-                  component: './editor/mind',
+                  component: './teacher/mind',
                 },
                 {
                   name: 'partner',
                   path: '/finance/partner',
-                  component: './editor/flow',
+                  component: './finance/partner',
                 },
                 {
                   name: 'support',
                   path: '/finance/support',
-                  component: './editor/mind',
+                  component: './finance/supplier',
                 },
                 {
                   name: 'withdraw',
                   path: '/finance/withdraw',
-                  component: './editor/flow',
+                  component: './editor/withdraw',
                 },
                 {
                   name: 'apply',
                   path: '/finance/apply',
-                  component: './editor/mind',
+                  component: './editor/apply',
                 },
               ],
             },
@@ -458,12 +458,12 @@ export default {
                 {
                   name: 'add',
                   path: '/swiper/add',
-                  component: './editor/flow',
+                  component: './swiper/add',
                 },
                 {
                   name: 'list',
                   path: '/swiper/list',
-                  component: './editor/mind',
+                  component: './swiper/list',
                 },
               ],
             },

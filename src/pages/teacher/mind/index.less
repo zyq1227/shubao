@@ -1,0 +1,72 @@
+.editor {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 250px);
+  background: #fff;
+}
+
+.editorHd {
+  padding: 8px;
+  border: 1px solid #e6e9ed;
+}
+
+.editorBd {
+  flex: 1;
+}
+
+.editorSidebar,
+.editorContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorSidebar {
+  background: #fafafa;
+
+  &:first-child {
+    border-right: 1px solid #e6e9ed;
+  }
+
+  &:last-child {
+    border-left: 1px solid #e6e9ed;
+  }
+}
+
+.flow,
+.mind,
+.koni {
+  flex: 1;
+}
+.search {
+  min-height: 600px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.button {
+  height: 60px;
+  margin-right: 10px;
+}
+.input {
+  display: flex;
+}
+.item {
+  flex: 1;
+}
+.item input {
+  width: 70%;
+  margin-left: 10px;
+}
+.button {
+  margin: 20px 0 10px;
+}
+.Buttontwo {
+  margin-left: 10px;
+}
+.span span {
+  display: block;
+  color: blueviolet;
+  cursor: pointer;
+}
