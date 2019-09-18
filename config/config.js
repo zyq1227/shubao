@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-09-17 19:01:45
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-09-17 19:40:57
+ */
 import defaultSettings from './defaultSettings'; // https://umijs.org/config/
 
 import slash from 'slash2';
@@ -339,7 +347,7 @@ export default {
                   name: 'list',
                   path: '/partner/list',
                   component: './editor/mind',
-                }
+                },
               ],
             },
             {
@@ -377,17 +385,17 @@ export default {
                 {
                   name: 'classify',
                   path: '/product/classify',
-                  component: './editor/flow',
+                  component: './product/producttype',
                 },
                 {
                   name: 'support',
                   path: '/product/support',
-                  component: './editor/mind',
+                  component: './product/support',
                 },
                 {
                   name: 'all',
                   path: '/product/all',
-                  component: './editor/flow',
+                  component: './product/productall',
                 },
                 {
                   name: 'before-verify',
@@ -409,7 +417,7 @@ export default {
                 {
                   name: 'class',
                   path: '/order/class',
-                  component: './editor/mind',
+                  component: './order/class',
                 },
               ],
             },
@@ -426,27 +434,27 @@ export default {
                 {
                   name: 'teacher',
                   path: '/finance/teacher',
-                  component: './editor/mind',
+                  component: './teacher/mind',
                 },
                 {
                   name: 'partner',
                   path: '/finance/partner',
-                  component: './editor/flow',
+                  component: './finance/partner',
                 },
                 {
                   name: 'support',
                   path: '/finance/support',
-                  component: './editor/mind',
+                  component: './finance/supplier',
                 },
                 {
                   name: 'withdraw',
                   path: '/finance/withdraw',
-                  component: './editor/flow',
+                  component: './editor/withdraw',
                 },
                 {
                   name: 'apply',
                   path: '/finance/apply',
-                  component: './editor/mind',
+                  component: './editor/apply',
                 },
               ],
             },
@@ -458,12 +466,12 @@ export default {
                 {
                   name: 'add',
                   path: '/swiper/add',
-                  component: './editor/flow',
+                  component: './swiper/add',
                 },
                 {
                   name: 'list',
                   path: '/swiper/list',
-                  component: './editor/mind',
+                  component: './swiper/list',
                 },
               ],
             },
@@ -523,12 +531,12 @@ export default {
   },
   chainWebpack: webpackPlugin,
   /*
-  proxy: {
-    '/server/api/': {
-      target: 'https://preview.pro.ant.design/',
-      changeOrigin: true,
-      pathRewrite: { '^/server': '' },
+    proxy: {
+      '/server/api/': {
+        target: 'https://preview.pro.ant.design/',
+        changeOrigin: true,
+        pathRewrite: { '^/server': '' },
+      },
     },
-  },
-  */
+    */
 };
