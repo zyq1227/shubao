@@ -330,11 +330,7 @@ export default {
                   name: 'card',
                   path: '/viper/card',
                   component: './viper/card',
-<<<<<<< HEAD
-                }
-=======
                 },
->>>>>>> 78f231c2a354ab9a2701292b0e9b7aeb47e1f3bd
               ],
             },
             {
@@ -459,26 +455,20 @@ export default {
                   name: 'withdraw',
                   path: '/finance/withdraw',
                   component: './finance/withdraw',
-<<<<<<< HEAD
-=======
                 },
                 {
                   name: '',
                   path: '/finance/watchWithDraw',
                   component: './finance/withdraw/watch',
->>>>>>> 78f231c2a354ab9a2701292b0e9b7aeb47e1f3bd
                 },
                 {
                   name: 'apply',
                   path: '/finance/apply',
                   component: './finance/apply',
-<<<<<<< HEAD
-=======
                 },
                 {
                   path: '/finance/support/supportDetial',
                   component: './finance/support/supportDetial',
->>>>>>> 78f231c2a354ab9a2701292b0e9b7aeb47e1f3bd
                 },
               ],
             },
