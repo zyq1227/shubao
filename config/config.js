@@ -373,11 +373,7 @@ export default {
                 {
                   name: 'before-verify',
                   path: '/class/beforeVerify',
-<<<<<<< HEAD
-                  component: './class/verify',
-=======
                   component: './class/beforeVerify',
->>>>>>> a158946df187cca6b6f081da0fd2d97364fe49b7
                 },
               ],
             },
