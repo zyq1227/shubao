@@ -11,10 +11,15 @@
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <style>
       .ant-layout.ant-layout-has-sider{
-        height: 100vh;
+        /* height: 100vh; */
+        /* overflow-x: hidden; */
       }
       aside{
-        height: 100vh;
+        overflow-x: hidden;
+      }
+      .ant-menu.ant-pro-sider-menu{
+        width: calc(100% + 17px) !important;
+        overflow-y: scroll !important;
       }
     </style>
   </head>
