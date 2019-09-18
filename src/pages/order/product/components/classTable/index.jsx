@@ -36,57 +36,6 @@ const tableColumns = [
     render: () => <a>查看</a>,
   },
 ];
-// class ClassTable extends Component {
-//   state = {
-//     labelName: ['姓名', '手机号', '课程编码'],
-//     name: ['username', 'tel', 'code'],
-//     tableList: [],
-
-  // };
-//   getFields() {
-//     let { labelName, name } = this.state;
-//     const count = labelName;
-//     const { getFieldDecorator } = this.props.form;
-//     const children = [];
-//     for (let i = 0; i < labelName.length; i++) {
-//       children.push(
-//         <Col span={8} key={i}>
-//           <Form.Item label={labelName[i]}>
-//             {getFieldDecorator(`${name[i]}`, {
-//               rules: [
-//                 {
-//                   required: true,
-//                   message: `Please input your ${name[i]}!`,
-//                 },
-//               ],
-//             })(<Input placeholder="请输入" />)}
-//           </Form.Item>
-//         </Col>,
-//       );
-//     }
-//     return children;
-//   }
-//   handleCurrencyChange = () => {};
-//   componentDidMount() {
-//     let basicData = Mock.mock({
-//       'list|1-100': [
-//         {
-//           'key|+1': 1,
-//           code: '@ip',
-//           username: '@name',
-//           money: '@integer(0)',
-//           name: '@character("upper")',
-//           tel: '@string("lower", 13, 20)',
-//           time: '@datetime("yyyy-MM-dd A HH:mm:ss")',
-//         },
-//       ],
-//     });
-//     this.setState({
-//       tableList: basicData,
-//     });
-//   }
-
-// }
 
 let inter = 0;
 
