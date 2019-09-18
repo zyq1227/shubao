@@ -14,8 +14,8 @@
   transition: 0.3s;
 }
 .card {
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
   color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
   font-variant: tabular-nums;
@@ -26,12 +26,10 @@
   background: #fff;
   border-radius: 2px;
   transition: all 0.3s;
-  // width: 700px;
-  // height: 400px;
   align-items: center;
   justify-content: center;
   margin: 24px 24px 0;
-  width: 98%;
+  width: 95%;
   height: 328px;
 }
 
@@ -47,13 +45,26 @@
   height: 32px;
 }
 .form {
-  margin-left: 160px;
-}
-
-.antform {
-  width: 800px;
+  width: 100%;
   height: 120px;
   display: flex;
+  font-size: 14px;
+  margin: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+}
+.antdfrom {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 39.9999px;
+  white-space: nowrap;
+  text-align: right;
+  vertical-align: middle;
+}
+.box {
+  display: block;
+  box-sizing: border-box;
+  width: 41.66666667%;
 }
 .btn {
   width: 100%;
@@ -65,8 +76,9 @@
 .butn {
   margin-right: 15px;
   background: #1890ff;
+  border-color: #1890ff;
   width: 80px;
-  height: 30px;
+  height: 35px;
   display: flex;
   justify-content: center;
   color: #fff;
@@ -76,10 +88,19 @@
 .bnd {
   margin-right: 15px;
   width: 80px;
-  height: 30px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   border: 1px solid #ccc;
+}
+.ant-upload-select-picture-card i {
+  font-size: 32px;
+  color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+  margin-top: 8px;
+  color: #666;
 }

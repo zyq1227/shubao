@@ -1,25 +1,19 @@
 import {
-  Badge,
   Button,
   Card,
   Col,
-  DatePicker,
-  Divider,
-  Dropdown,
   Form,
   Icon,
   Input,
-  InputNumber,
-  Menu,
   Row,
   Select,
-  Table,
-  message,
+  Table
 } from 'antd';
 import React, { Component, Fragment } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
+import { NavLink } from 'react-router-dom'
 import styles from './style.less';
-import data from './data.json';
+import data from './mock'
 
 class Partner extends Component {
   handleSearch = e => {
@@ -68,40 +62,40 @@ class Partner extends Component {
       },
       {
         title: '总收入',
-        dataIndex: 'income ',
-        key: 'income ',
+        dataIndex: 'income',
+        key: 'income',
         // filters: [{ text: 'Joe', value: 'Joe' }, { text: 'Jim', value: 'Jim' }],
-        filteredValue: filteredInfo.name || null,
-        onFilter: (value, record) => record.name.includes(value),
-        sorter: (a, b) => a.name.length - b.name.length,
-        sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
+        // filteredValue: filteredInfo.income || null,
+        // onFilter: (value, record) => record.income.includes(value),
+        sorter: (a, b) => a.income.length - b.income.length,
+        sortOrder: sortedInfo.columnKey === 'income' && sortedInfo.order,
       },
       {
         title: '会员卡收入',
         dataIndex: 'vip',
         key: 'vip',
-        sorter: (a, b) => a.age - b.age,
-        sortOrder: sortedInfo.columnKey === 'age' && sortedInfo.order,
+        sorter: (a, b) => a.vip - b.vip,
+        sortOrder: sortedInfo.columnKey === 'vip' && sortedInfo.order,
       },
       {
         title: '已经提现',
         dataIndex: 'already',
         key: 'already',
         // filters: [{ text: 'London', value: 'London' }, { text: 'New York', value: 'New York' }],
-        filteredValue: filteredInfo.address || null,
-        onFilter: (value, record) => record.address.includes(value),
-        sorter: (a, b) => a.address.length - b.address.length,
-        sortOrder: sortedInfo.columnKey === 'address' && sortedInfo.order,
+        // filteredValue: filteredInfo.already || null,
+        // onFilter: (value, record) => record.already.includes(value),
+        sorter: (a, b) => a.already.length - b.already.length,
+        sortOrder: sortedInfo.columnKey === 'already' && sortedInfo.order,
       },
       {
         title: '未提现',
         dataIndex: 'not',
         key: 'not',
         // filters: [{ text: 'London', value: 'London' }, { text: 'New York', value: 'New York' }],
-        filteredValue: filteredInfo.address || null,
-        onFilter: (value, record) => record.address.includes(value),
-        sorter: (a, b) => a.address.length - b.address.length,
-        sortOrder: sortedInfo.columnKey === 'address' && sortedInfo.order,
+        // filteredValue: filteredInfo.not || null,
+        // onFilter: (value, record) => record.not.includes(value),
+        sorter: (a, b) => a.not.length - b.not.length,
+        sortOrder: sortedInfo.columnKey === 'not' && sortedInfo.order,
       },
       {
         title: '操作',
@@ -109,7 +103,7 @@ class Partner extends Component {
         key: 'operation',
         render: (text, record) => (
           <span>
-            <a href="#">查看</a>
+            <NavLink to="/finance/partner/look">查看</NavLink>
             <br />
             <a href="#">编辑</a>
           </span>
