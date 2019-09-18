@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-09-17 19:01:45
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-09-18 07:35:47
+ */
 import { DefaultFooter, getMenuData, getPageTitle } from '@ant-design/pro-layout';
 import DocumentTitle from 'react-document-title';
 import Link from 'umi/link';
@@ -14,7 +22,9 @@ const UserLayout = props => {
       routes: [],
     },
   } = props;
+
   const { routes = [] } = route;
+
   const {
     children,
     location = {

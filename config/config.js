@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-09-17 19:01:45
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-09-17 19:40:57
+ */
 import defaultSettings from './defaultSettings'; // https://umijs.org/config/
 
 import slash from 'slash2';
@@ -377,7 +385,7 @@ export default {
                 {
                   name: 'classify',
                   path: '/product/classify',
-                  component: './editor/flow',
+                  component: './product/producttype',
                 },
                 {
                   name: 'support',
@@ -387,7 +395,7 @@ export default {
                 {
                   name: 'all',
                   path: '/product/all',
-                  component: './editor/flow',
+                  component: './product/productall',
                 },
                 {
                   name: 'before-verify',
