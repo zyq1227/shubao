@@ -63,9 +63,7 @@ export default connect(({ routing }) => ({
       trigger="click"
       getPopupContainer={dom => (divDom.current ? divDom.current : dom)}
     >
-      <div className={styles['copy-block']} ref={divDom}>
-        <Icon type="download" />
-      </div>
+      
     </Popover>
   );
 });
