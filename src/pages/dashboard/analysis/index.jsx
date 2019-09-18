@@ -135,7 +135,7 @@ class Analysis extends Component {
       <GridContent>
         <React.Fragment>
           <Suspense fallback={<PageLoading />}>
-            <IntroduceRow loading={loading} visitData={visitData} visitData2={visitData2} />
+            <IntroduceRow loading={loading} visitData={visitData} />
           </Suspense>
           <Suspense fallback={null}>
             <SalesCard
@@ -147,7 +147,7 @@ class Analysis extends Component {
               selectDate={this.selectDate}
             />
           </Suspense>
-          {/* <Row
+          <Row
             gutter={24}
             type="flex"
             style={{
@@ -175,8 +175,8 @@ class Analysis extends Component {
                 />
               </Suspense>
             </Col>
-          </Row> */}
-          {/* <Suspense fallback={null}>
+          </Row>
+          <Suspense fallback={null}>
             <OfflineData
               activeKey={activeKey}
               loading={loading}
@@ -184,7 +184,7 @@ class Analysis extends Component {
               offlineChartData={offlineChartData}
               handleTabChange={this.handleTabChange}
             />
-          </Suspense> */}
+          </Suspense>
         </React.Fragment>
       </GridContent>
     );

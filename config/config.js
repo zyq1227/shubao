@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: sueRimn
+ * @Date: 2019-09-17 19:01:45
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-09-17 19:40:57
+ */
 import defaultSettings from './defaultSettings'; // https://umijs.org/config/
 
 import slash from 'slash2';
@@ -131,183 +139,183 @@ export default {
                   path: '/dashboard/analysis',
                   component: './dashboard/analysis',
                 },
-                {
-                  name: 'monitor',
-                  path: '/dashboard/monitor',
-                  component: './dashboard/monitor',
-                },
-                {
-                  name: 'workplace',
-                  path: '/dashboard/workplace',
-                  component: './dashboard/workplace',
-                },
+                // {
+                //   name: 'monitor',
+                //   path: '/dashboard/monitor',
+                //   component: './dashboard/monitor',
+                // },
+                // {
+                //   name: 'workplace',
+                //   path: '/dashboard/workplace',
+                //   component: './dashboard/workplace',
+                // },
               ],
             },
-            {
-              path: '/form',
-              icon: 'form',
-              name: 'form',
-              routes: [
-                {
-                  name: 'basic-form',
-                  path: '/form/basic-form',
-                  component: './form/basic-form',
-                },
-                {
-                  name: 'step-form',
-                  path: '/form/step-form',
-                  component: './form/step-form',
-                },
-                {
-                  name: 'advanced-form',
-                  path: '/form/advanced-form',
-                  component: './form/advanced-form',
-                },
-              ],
-            },
-            {
-              path: '/list',
-              icon: 'table',
-              name: 'list',
-              routes: [
-                {
-                  path: '/list/search',
-                  name: 'search-list',
-                  component: './list/search',
-                  routes: [
-                    {
-                      path: '/list/search',
-                      redirect: '/list/search/articles',
-                    },
-                    {
-                      name: 'articles',
-                      path: '/list/search/articles',
-                      component: './list/search/articles',
-                    },
-                    {
-                      name: 'projects',
-                      path: '/list/search/projects',
-                      component: './list/search/projects',
-                    },
-                    {
-                      name: 'applications',
-                      path: '/list/search/applications',
-                      component: './list/search/applications',
-                    },
-                  ],
-                },
-                {
-                  name: 'table-list',
-                  path: '/list/table-list',
-                  component: './list/table-list',
-                },
-                {
-                  name: 'basic-list',
-                  path: '/list/basic-list',
-                  component: './list/basic-list',
-                },
-                {
-                  name: 'card-list',
-                  path: '/list/card-list',
-                  component: './list/card-list',
-                },
-              ],
-            },
-            {
-              path: '/profile',
-              name: 'profile',
-              icon: 'profile',
-              routes: [
-                {
-                  name: 'basic',
-                  path: '/profile/basic',
-                  component: './profile/basic',
-                },
-                {
-                  name: 'advanced',
-                  path: '/profile/advanced',
-                  component: './profile/advanced',
-                },
-              ],
-            },
-            {
-              name: 'result',
-              icon: 'check-circle-o',
-              path: '/result',
-              routes: [
-                {
-                  name: 'success',
-                  path: '/result/success',
-                  component: './result/success',
-                },
-                {
-                  name: 'fail',
-                  path: '/result/fail',
-                  component: './result/fail',
-                },
-              ],
-            },
-            {
-              name: 'exception',
-              icon: 'warning',
-              path: '/exception',
-              routes: [
-                {
-                  name: '403',
-                  path: '/exception/403',
-                  component: './exception/403',
-                },
-                {
-                  name: '404',
-                  path: '/exception/404',
-                  component: './exception/404',
-                },
-                {
-                  name: '500',
-                  path: '/exception/500',
-                  component: './exception/500',
-                },
-              ],
-            },
-            {
-              name: 'account',
-              icon: 'user',
-              path: '/account',
-              routes: [
-                {
-                  name: 'center',
-                  path: '/account/center',
-                  component: './account/center',
-                },
-                {
-                  name: 'settings',
-                  path: '/account/settings',
-                  component: './account/settings',
-                },
-              ],
-            },
-            {
-              name: 'editor',
-              icon: 'highlight',
-              path: '/editor',
-              routes: [
-                {
-                  name: 'flow',
-                  path: '/editor/flow',
-                  component: './editor/flow',
-                },
-                {
-                  name: 'mind',
-                  path: '/editor/mind',
-                  component: './editor/mind',
-                },
-                {
-                  name: 'koni',
-                  path: '/editor/koni',
-                  component: './editor/koni',
-                },
-              ],
-            },
+            // {
+            //   path: '/form',
+            //   icon: 'form',
+            //   name: 'form',
+            //   routes: [
+            //     {
+            //       name: 'basic-form',
+            //       path: '/form/basic-form',
+            //       component: './form/basic-form',
+            //     },
+            //     {
+            //       name: 'step-form',
+            //       path: '/form/step-form',
+            //       component: './form/step-form',
+            //     },
+            //     {
+            //       name: 'advanced-form',
+            //       path: '/form/advanced-form',
+            //       component: './form/advanced-form',
+            //     },
+            //   ],
+            // },
+            // {
+            //   path: '/list',
+            //   icon: 'table',
+            //   name: 'list',
+            //   routes: [
+            //     {
+            //       path: '/list/search',
+            //       name: 'search-list',
+            //       component: './list/search',
+            //       routes: [
+            //         {
+            //           path: '/list/search',
+            //           redirect: '/list/search/articles',
+            //         },
+            //         {
+            //           name: 'articles',
+            //           path: '/list/search/articles',
+            //           component: './list/search/articles',
+            //         },
+            //         {
+            //           name: 'projects',
+            //           path: '/list/search/projects',
+            //           component: './list/search/projects',
+            //         },
+            //         {
+            //           name: 'applications',
+            //           path: '/list/search/applications',
+            //           component: './list/search/applications',
+            //         },
+            //       ],
+            //     },
+            //     {
+            //       name: 'table-list',
+            //       path: '/list/table-list',
+            //       component: './list/table-list',
+            //     },
+            //     {
+            //       name: 'basic-list',
+            //       path: '/list/basic-list',
+            //       component: './list/basic-list',
+            //     },
+            //     {
+            //       name: 'card-list',
+            //       path: '/list/card-list',
+            //       component: './list/card-list',
+            //     },
+            //   ],
+            // },
+            // {
+            //   path: '/profile',
+            //   name: 'profile',
+            //   icon: 'profile',
+            //   routes: [
+            //     {
+            //       name: 'basic',
+            //       path: '/profile/basic',
+            //       component: './profile/basic',
+            //     },
+            //     {
+            //       name: 'advanced',
+            //       path: '/profile/advanced',
+            //       component: './profile/advanced',
+            //     },
+            //   ],
+            // },
+            // {
+            //   name: 'result',
+            //   icon: 'check-circle-o',
+            //   path: '/result',
+            //   routes: [
+            //     {
+            //       name: 'success',
+            //       path: '/result/success',
+            //       component: './result/success',
+            //     },
+            //     {
+            //       name: 'fail',
+            //       path: '/result/fail',
+            //       component: './result/fail',
+            //     },
+            //   ],
+            // },
+            // {
+            //   name: 'exception',
+            //   icon: 'warning',
+            //   path: '/exception',
+            //   routes: [
+            //     {
+            //       name: '403',
+            //       path: '/exception/403',
+            //       component: './exception/403',
+            //     },
+            //     {
+            //       name: '404',
+            //       path: '/exception/404',
+            //       component: './exception/404',
+            //     },
+            //     {
+            //       name: '500',
+            //       path: '/exception/500',
+            //       component: './exception/500',
+            //     },
+            //   ],
+            // },
+            // {
+            //   name: 'account',
+            //   icon: 'user',
+            //   path: '/account',
+            //   routes: [
+            //     {
+            //       name: 'center',
+            //       path: '/account/center',
+            //       component: './account/center',
+            //     },
+            //     {
+            //       name: 'settings',
+            //       path: '/account/settings',
+            //       component: './account/settings',
+            //     },
+            //   ],
+            // },
+            // {
+            //   name: 'editor',
+            //   icon: 'highlight',
+            //   path: '/editor',
+            //   routes: [
+            //     {
+            //       name: 'flow',
+            //       path: '/editor/flow',
+            //       component: './editor/flow',
+            //     },
+            //     {
+            //       name: 'mind',
+            //       path: '/editor/mind',
+            //       component: './editor/mind',
+            //     },
+            //     {
+            //       name: 'koni',
+            //       path: '/editor/koni',
+            //       component: './editor/koni',
+            //     },
+            //   ],
+            // },
             {
               name: 'viper',
               icon: 'table',
@@ -316,12 +324,12 @@ export default {
                 {
                   name: 'list',
                   path: '/viper/list',
-                  component: './editor/flow',
+                  component: './viper/list',
                 },
                 {
                   name: 'card',
                   path: '/viper/card',
-                  component: './editor/mind',
+                  component: './viper/card',
                 }
               ],
             },
@@ -333,13 +341,13 @@ export default {
                 {
                   name: 'add',
                   path: '/partner/add',
-                  component: './editor/flow',
+                  component: './partner/add',
                 },
                 {
                   name: 'list',
                   path: '/partner/list',
-                  component: './editor/mind',
-                }
+                  component: './partner/list',
+                },
               ],
             },
             {
@@ -350,22 +358,26 @@ export default {
                 {
                   name: 'classify',
                   path: '/class/classify',
-                  component: './editor/flow',
+                  component: './class/classify',
                 },
                 {
                   name: 'support',
                   path: '/class/support',
-                  component: './editor/mind',
+                  component: './class/support',
                 },
                 {
                   name: 'all',
                   path: '/class/all',
-                  component: './editor/flow',
+                  component: './class/all',
                 },
                 {
                   name: 'before-verify',
                   path: '/class/beforeVerify',
+<<<<<<< HEAD
                   component: './class/verify',
+=======
+                  component: './class/beforeVerify',
+>>>>>>> a158946df187cca6b6f081da0fd2d97364fe49b7
                 },
               ],
             },
@@ -377,22 +389,22 @@ export default {
                 {
                   name: 'classify',
                   path: '/product/classify',
-                  component: './editor/flow',
+                  component: './product/classify',
                 },
                 {
                   name: 'support',
                   path: '/product/support',
-                  component: './editor/mind',
+                  component: './product/support',
                 },
                 {
                   name: 'all',
                   path: '/product/all',
-                  component: './editor/flow',
+                  component: './product/all',
                 },
                 {
                   name: 'before-verify',
                   path: '/product/beforeVerify',
-                  component: './editor/mind',
+                  component: './product/beforeVerify',
                 },
               ],
             },
@@ -404,12 +416,12 @@ export default {
                 {
                   name: 'product',
                   path: '/order/product',
-                  component: './editor/flow',
+                  component: './order/product',
                 },
                 {
                   name: 'class',
                   path: '/order/class',
-                  component: './editor/mind',
+                  component: './order/class',
                 },
               ],
             },
@@ -421,32 +433,32 @@ export default {
                 {
                   name: 'dashboard',
                   path: '/finance/dashboard',
-                  component: './editor/flow',
+                  component: './finance/dashboard',
                 },
                 {
                   name: 'teacher',
                   path: '/finance/teacher',
-                  component: './editor/mind',
+                  component: './finance/teacher',
                 },
                 {
                   name: 'partner',
                   path: '/finance/partner',
-                  component: './editor/flow',
+                  component: './finance/partner',
                 },
                 {
                   name: 'support',
                   path: '/finance/support',
-                  component: './editor/mind',
+                  component: './finance/support',
                 },
                 {
                   name: 'withdraw',
                   path: '/finance/withdraw',
-                  component: './editor/flow',
+                  component: './finance/withdraw',
                 },
                 {
                   name: 'apply',
                   path: '/finance/apply',
-                  component: './editor/mind',
+                  component: './finance/apply',
                 },
               ],
             },
@@ -458,12 +470,12 @@ export default {
                 {
                   name: 'add',
                   path: '/swiper/add',
-                  component: './editor/flow',
+                  component: './swiper/add',
                 },
                 {
                   name: 'list',
                   path: '/swiper/list',
-                  component: './editor/mind',
+                  component: './swiper/list',
                 },
               ],
             },
@@ -523,12 +535,12 @@ export default {
   },
   chainWebpack: webpackPlugin,
   /*
-  proxy: {
-    '/server/api/': {
-      target: 'https://preview.pro.ant.design/',
-      changeOrigin: true,
-      pathRewrite: { '^/server': '' },
+    proxy: {
+      '/server/api/': {
+        target: 'https://preview.pro.ant.design/',
+        changeOrigin: true,
+        pathRewrite: { '^/server': '' },
+      },
     },
-  },
-  */
+    */
 };

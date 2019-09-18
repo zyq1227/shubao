@@ -1,6 +1,5 @@
 import { Col, Row } from 'antd';
 import GGEditor, { Flow } from 'gg-editor';
-import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import React from 'react';
 import { formatMessage } from 'umi-plugin-react/locale';
 import EditorMinimap from './components/EditorMinimap';

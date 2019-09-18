@@ -1,0 +1,22 @@
+[
+  {
+    "key": 1,
+    "id": 981,
+    "name": "John Brown",
+    "tel": 166722193892,
+    "number": "999",
+    "money": "981",
+    "type": "上线",
+    "operation": ["查看", "编辑", "禁用"]
+  },
+  {
+    "key": 2,
+    "id": 981,
+    "name": "John Brown",
+    "tel": 166722193892,
+    "number": "999",
+    "money": "981",
+    "type": "未上线",
+    "operation": ["查看", "编辑", "禁用"]
+  }
+]
