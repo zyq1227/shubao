@@ -48,7 +48,6 @@ class index extends Component {
                   }
               ],
              onFilter: (value, record) => record.name.indexOf(value) === 0,
-              sorter: (a, b) => a.name.length - b.name.length,
               sortDirections: ['descend'],
               render:(e)=><p style={{"display":"flex","justifyContent": "spaceAround","alignItems": "center"}}>
                     <span 
