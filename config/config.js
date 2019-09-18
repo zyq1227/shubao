@@ -382,7 +382,7 @@ export default {
                 {
                   name: 'support',
                   path: '/product/support',
-                  component: './editor/mind',
+                  component: './product/support',
                 },
                 {
                   name: 'all',
@@ -523,12 +523,12 @@ export default {
   },
   chainWebpack: webpackPlugin,
   /*
-  proxy: {
-    '/server/api/': {
-      target: 'https://preview.pro.ant.design/',
-      changeOrigin: true,
-      pathRewrite: { '^/server': '' },
+    proxy: {
+      '/server/api/': {
+        target: 'https://preview.pro.ant.design/',
+        changeOrigin: true,
+        pathRewrite: { '^/server': '' },
+      },
     },
-  },
-  */
+    */
 };
