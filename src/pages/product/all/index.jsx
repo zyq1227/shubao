@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-17 19:20:41
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-18 08:30:52
+ * @LastEditTime: 2019-09-18 14:39:27
  */
 import React, { Component } from 'react';
 import styles from './index.less';
@@ -56,6 +56,9 @@ export class Productall extends Component {
         key: '1',
         title: '商品编号',
         dataIndex: 'id',
+        render: (text) => {
+          return <a>{text}</a>
+        }
       },
       {
         key: '2',
@@ -71,39 +74,46 @@ export class Productall extends Component {
         key: '4',
         title: '售价',
         dataIndex: 'money',
+        sorter: true,
       },
       {
         key: '5',
         title: '售卖数量',
         dataIndex: 'money',
+        sorter: true,
       },
       {
         key: '6',
         title: '总收入',
         dataIndex: 'money',
+        sorter: true,
       },
       {
         key: '7',
         title: '分类',
         dataIndex: 'type',
+        sorter: true,
       },
       {
         key: '8',
         title: '状态',
         dataIndex: 'status',
+        filters: [{ text: '上线', value: 'male' }, { text: '未上线', value: 'female' }]
       },
       {
         key: '9',
         title: '操作',
         dataIndex: 'operation',
+        render: (test) => {
+          return test.map(item => {
+            return <p key={item}><a>{item}</a></p>
+          })
+        }
       },
     ];
     return (
-      <PageHeaderWrapper
-        content={formatMessage({
-          id: 'editor-mind.description',
-        })}
-      >
+      <PageHeaderWrapper>
+
         <div className={styles.contents}>
           <Form {...formItemLayout} className={styles.form}>
             <Form.Item label="姓名" className={styles.antRow}>
@@ -123,13 +133,13 @@ export class Productall extends Component {
             </Form.Item>
           </Form>
           <div className={styles.btnbox}>
-            <Button type="primary" className={styles.btns} size="large">
+            <Button type="primary" className={styles.btns}>
               查询
             </Button>
-            <Button className={styles.btns} size="large">
+            <Button className={styles.btns}>
               重置
             </Button>
-            <Button type="primary" className={styles.btns} size="large">
+            <Button type="primary" className={styles.btns}>
               +新建
             </Button>
           </div>

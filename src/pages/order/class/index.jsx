@@ -9,12 +9,7 @@ const { Content } = Layout;
 class ClassOrder extends React.Component {
   render() {
     return (
-      <PageHeaderWrapper
-        content={formatMessage({
-          id: 'editor-flow.description',
-          defaultMessage: 'description',
-        })}
-      >
+      <PageHeaderWrapper>
         <Layout style={{ padding: '0 0 24px' }}>
           <Content
             style={{
@@ -24,7 +19,7 @@ class ClassOrder extends React.Component {
               minHeight: 280,
             }}
           >
-            <ClassTable />
+            <ClassTable style={{ height: '100vh', overflowY: 'scroll' }} />
           </Content>
         </Layout>
       </PageHeaderWrapper>

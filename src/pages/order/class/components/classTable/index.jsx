@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Input, Table, Col, Row, Select, Button } from 'antd';
+import { withRouter } from 'react-router-dom';
+import { Form, Input, Table, Col, Row, Select, Button, Modal } from 'antd';
 import styles from './index.less';
 import Mock from 'mockjs';
 
@@ -9,6 +10,8 @@ class ClassTable extends Component {
   state = {
     labelName: ['姓名', '手机号', '课程编码'],
     name: ['username', 'tel', 'code'],
+    visible: false,
+    confirmLoading: false,
     tableList: [],
     columns: [
       {
@@ -44,6 +47,7 @@ class ClassTable extends Component {
   };
   getFields() {
     let { labelName, name } = this.state;
+    console.log(this.props);
     const count = labelName;
     const { getFieldDecorator } = this.props.form;
     const children = [];
@@ -65,6 +69,7 @@ class ClassTable extends Component {
     }
     return children;
   }
+
   handleCurrencyChange = () => {};
   componentDidMount() {
     let basicData = Mock.mock({
@@ -84,12 +89,44 @@ class ClassTable extends Component {
       tableList: basicData,
     });
   }
+  handleSearch = e => {
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+      console.log('Received values of form: ', values);
+    });
+  };
+  handleFormReset = () => {};
+  handleFormConfim = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+  handleCancel = () => {
+    this.setState({
+      visible: false,
+    });
+  };
+  handleOk = () => {
+    this.setState({
+      visible: false,
+    });
+  };
   render() {
     const { getFieldDecorator } = this.props.form;
-    const { columns, tableList } = this.state;
+    const { columns, tableList, visible, confirmLoading } = this.state;
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 14 },
+        sm: { span: 5 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 },
+      },
+    };
     return (
       <div className={styles.ClassTableInput}>
-        <Form className="ant-advanced-search-form">
+        <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
           <Row gutter={24}>{this.getFields()}</Row>
           <Form.Item label="所在地">
             <Select
@@ -119,7 +156,7 @@ class ClassTable extends Component {
                 style={{
                   marginLeft: 8,
                 }}
-                onClick={this.handleFormReset}
+                onClick={this.handleFormConfim}
               >
                 +新建
               </Button>
@@ -127,10 +164,31 @@ class ClassTable extends Component {
           </Col>
         </Form>
         <Table style={{ marginTop: '25px' }} columns={columns} dataSource={tableList.list} />
+
+        <Modal
+          title="新建规则"
+          visible={visible}
+          onOk={this.handleOk}
+          confirmLoading={confirmLoading}
+          onCancel={this.handleCancel}
+        >
+          <Form {...formItemLayout}>
+            <Form.Item label="描述">
+              {getFieldDecorator('description', {
+                rules: [
+                  {
+                    required: true,
+                    message: `Please input your description!`,
+                  },
+                ],
+              })(<Input placeholder="请输入" />)}
+            </Form.Item>
+          </Form>
+        </Modal>
       </div>
     );
   }
 }
 const WrappedRegistrationForm = Form.create({ name: 'register' });
 
-export default WrappedRegistrationForm(ClassTable);
+export default withRouter(WrappedRegistrationForm(ClassTable));
