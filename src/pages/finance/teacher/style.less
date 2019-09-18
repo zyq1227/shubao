@@ -1,56 +1,72 @@
-@import '~antd/es/style/themes/default.less';
+.editor {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 250px);
+  background: #fff;
+}
 
-.tableList {
-  .tableListOperator {
-    margin-bottom: 16px;
-    button {
-      margin-right: 8px;
-    }
+.editorHd {
+  padding: 8px;
+  border: 1px solid #e6e9ed;
+}
+
+.editorBd {
+  flex: 1;
+}
+
+.editorSidebar,
+.editorContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorSidebar {
+  background: #fafafa;
+
+  &:first-child {
+    border-right: 1px solid #e6e9ed;
+  }
+
+  &:last-child {
+    border-left: 1px solid #e6e9ed;
   }
 }
 
-.tableListForm {
-  :global {
-    .ant-form-item {
-      display: flex;
-      margin-right: 0;
-      margin-bottom: 24px;
-      > .ant-form-item-label {
-        width: auto;
-        padding-right: 8px;
-        line-height: 32px;
-      }
-      .ant-form-item-control {
-        line-height: 32px;
-      }
-    }
-    .ant-form-item-control-wrapper {
-      flex: 1;
-    }
-  }
-  .submitButtons {
-    display: block;
-    margin-bottom: 24px;
-    white-space: nowrap;
-  }
+.flow,
+.mind,
+.koni {
+  flex: 1;
 }
-
-@media screen and (max-width: @screen-lg) {
-  .tableListForm :global(.ant-form-item) {
-    margin-right: 24px;
-  }
+.search {
+  min-height: 600px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
 }
-
-@media screen and (max-width: @screen-md) {
-  .tableListForm :global(.ant-form-item) {
-    margin-right: 8px;
-  }
+.button {
+  height: 60px;
+  margin-right: 10px;
 }
-
-.table-operations {
-  margin-bottom: 16px;
+.input {
+  display: flex;
 }
-
-.table-operations > button {
-  margin-right: 8px;
+.item {
+  flex: 1;
+}
+.item input {
+  width: 70%;
+  margin-left: 10px;
+}
+.button {
+  margin: 20px 0 10px;
+}
+.Buttontwo {
+  margin-left: 10px;
+}
+.span span {
+  display: block;
+  color: blueviolet;
+  cursor: pointer;
 }
