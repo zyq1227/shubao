@@ -6,30 +6,21 @@ import { Layout } from 'antd';
 
 const { Content } = Layout;
 
-class ClassOrder extends React.Component {
-  render() {
-    return (
-      <PageHeaderWrapper
-        content={formatMessage({
-          id: 'editor-flow.description',
-          defaultMessage: 'description',
-        })}
+const ClassOrder = props=>{
+  return <PageHeaderWrapper>
+    <Layout style={{ padding: '0 0 24px' }}>
+      <Content
+        style={{
+          background: '#fff',
+          padding: 24,
+          margin: 0,
+          minHeight: 280,
+        }}
       >
-        <Layout style={{ padding: '0 0 24px' }}>
-          <Content
-            style={{
-              background: '#fff',
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-            }}
-          >
-            <ClassTable />
-          </Content>
-        </Layout>
-      </PageHeaderWrapper>
-    );
-  }
+        <ClassTable />
+      </Content>
+    </Layout>
+  </PageHeaderWrapper>
 }
 
 export default ClassOrder;
