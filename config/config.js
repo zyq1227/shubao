@@ -358,7 +358,7 @@ export default {
                 {
                   name: 'classify',
                   path: '/class/classify',
-                  component: './editor/flow',
+                  component: './course/flow',
                 },
                 {
                   name: 'support',
