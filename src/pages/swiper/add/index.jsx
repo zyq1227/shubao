@@ -1,6 +1,5 @@
-/* eslint-disable react/button-has-type */
 import React, { Component } from 'react';
-import { Upload, Icon, Modal, Breadcrumb, Input } from 'antd';
+import { Upload, Icon, Modal, Breadcrumb, Input, Button } from 'antd';
 import styles from './style.less';
 
 function getBase64(file) {
@@ -30,6 +29,7 @@ export default class Add extends Component {
 
   handlePreview = async file => {
     if (!file.url && !file.preview) {
+      // eslint-disable-next-line no-param-reassign
       file.preview = await getBase64(file.originFileObj);
     }
 
@@ -65,9 +65,8 @@ export default class Add extends Component {
               <Input placeholder="请输入跳转连接" />
             </div>
             <div className={styles.form}>
-              <div className={styles.antform}>
-                <span>上传图片：</span>
-
+              <span className={styles.antdfrom}>上传图片：</span>
+              <div className={styles.box}>
                 <Upload
                   action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
                   listType="picture-card"
@@ -83,8 +82,8 @@ export default class Add extends Component {
               </div>
             </div>
             <div className={styles.btn}>
-              <span className={styles.butn}>提交</span>
-              <span className={styles.bnd}>保存</span>
+              <Button className={styles.butn}>提交</Button>
+              <Button className={styles.bnd}>保存</Button>
             </div>
           </div>
         </div>

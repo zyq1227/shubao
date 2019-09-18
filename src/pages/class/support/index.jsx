@@ -50,7 +50,7 @@ class index extends Component {
              onFilter: (value, record) => record.name.indexOf(value) === 0,
               sortDirections: ['descend'],
               render:(e)=><p style={{"display":"flex","justifyContent": "spaceAround","alignItems": "center"}}>
-                    <span 
+                    <span
                     style={e.disabled?{"width":"10px","height":"10px","borderRadius":"50%","background": "darkseagreen"}:{"width":"10px","height":"10px","borderRadius":"50%","background": "deepskyblue"}}></span>
                     <b>{e.disabled?"正常":"禁用"}</b>
                </p>},
@@ -59,10 +59,10 @@ class index extends Component {
 
                 }}>查看</a>
                 <a style={{marginLeft:"3px"}}  onClick={()=>{
-                    
+
                 }}>编辑</a>
                 <a style={{marginLeft:"3px"}}  onClick={()=>{
-                    
+
                 }}>禁用</a>
             </p> },
         ],
@@ -71,15 +71,15 @@ class index extends Component {
     onChange(value) {
         console.log(`selected ${value}`);
       }
-      
+
     onBlur() {
         console.log('blur');
       }
-      
+
     onFocus() {
         console.log('focus');
       }
-      
+
     onSearch(val) {
         console.log('search:', val);
       }
@@ -124,7 +124,7 @@ class index extends Component {
                         </div>
 
                     </div>
-                    
+
                     <Table style={{background:"#fff"}} columns={this.state.columns} dataSource={this.state.data}/>
                 </GGEditor>
             </PageHeaderWrapper>

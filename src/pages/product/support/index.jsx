@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { formatMessage } from 'umi-plugin-react/locale';
-import { Form, Icon, Input, Button, Table, Divider } from 'antd';
-import mock from './mock/index';
+import { Form, Icon, Input, Button, Table, Divider, Select } from 'antd';
 import axios from 'axios';
+import mock from './mock/index';
 import styles from './index.less';
+
+const { Option } = Select;
 
 class Support extends Component {
   state = {
@@ -26,8 +27,26 @@ class Support extends Component {
     });
   };
 
+  // 重置
+  restForm = () => {
+    this.props.form.resetFields();
+  };
+
+  // 新建
+  newForm = () => {
+    this.props.history.push('/product/detail');
+  };
+
+  sayHandle(text) {
+    console.log('test----', text);
+  }
+
+  deleteFn(record) {
+    console.log('record----', record);
+  }
+
   render() {
-    const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
+    const { getFieldDecorator } = this.props.form;
 
     const formItemLayout = {
       labelCol: {
@@ -83,25 +102,20 @@ class Support extends Component {
         key: 'action',
         render: (text, record) => (
           <span>
-            <a>查看</a>
+            <a onClick={this.sayHandle.bind(this, text)}>查看</a>
             <Divider type="vertical" />
             <a>编辑</a>
             <Divider type="vertical" />
-            <a>删除</a>
+            <a onClick={this.deleteFn.bind(this, record)}>删除</a>
           </span>
         ),
       },
     ];
 
-    let { data } = this.state;
+    const { data } = this.state;
 
     return (
-      <PageHeaderWrapper
-        content={formatMessage({
-          id: 'editor-mind.description',
-          defaultMessage: 'description',
-        })}
-      >
+      <PageHeaderWrapper>
         <div className={styles.supportPage}>
           <div className={styles.inps}>
             <div className={styles.inpsContent}>
@@ -113,19 +127,13 @@ class Support extends Component {
               >
                 <Form.Item label="姓名" className={styles.formItem}>
                   {getFieldDecorator('name', {
-                    rules: [
-                      {
-                        type: 'name',
-                        message: 'The input is not valid name!',
-                      },
-                    ],
+                    rules: [{ message: 'Please input your name!' }],
                   })(<Input placeholder="请输入" />)}
                 </Form.Item>
                 <Form.Item label="手机号" className={styles.formItem}>
                   {getFieldDecorator('number', {
                     rules: [
                       {
-                        type: 'number',
                         message: 'The input is not valid number!',
                       },
                     ],
@@ -135,28 +143,25 @@ class Support extends Component {
                   {getFieldDecorator('code', {
                     rules: [
                       {
-                        type: 'code',
                         message: 'The input is not valid code!',
                       },
                     ],
                   })(<Input placeholder="请输入" />)}
                 </Form.Item>
                 <Form.Item label="所在地" className={styles.formItem}>
-                  {getFieldDecorator('address', {
-                    rules: [
-                      {
-                        type: 'address',
-                        message: 'The input is not valid address!',
-                      },
-                    ],
-                  })(<Input placeholder="请输入" />)}
+                  <Select showSearch style={{ width: 245 }} placeholder="请选择">
+                    <Option value="jack">关闭</Option>
+                    <Option value="lucy">运行中</Option>
+                  </Select>
                 </Form.Item>
                 <Form.Item className={styles.formBtn}>
                   <Button type="primary" htmlType="submit" className={styles.btnSearch}>
                     查询
                   </Button>
-                  <Button type="block">重置</Button>
-                  <Button type="primary" icon="plus">
+                  <Button type="block" onClick={this.restForm.bind(this)}>
+                    重置
+                  </Button>
+                  <Button type="primary" icon="plus" onClick={this.newForm.bind(this)}>
                     新建
                   </Button>
                 </Form.Item>
@@ -171,12 +176,22 @@ class Support extends Component {
 
   componentDidMount() {
     axios.get('/api/proctList').then(res => {
-      console.log('res----', res.data.list);
+      const data = res.data.list.map((item, index) => ({
+        key: index,
+        address: item.address,
+        code: item.code,
+        count: item.count,
+        fen: item.fen,
+        id: item.id,
+        name: item.name,
+        number: item.number,
+        total: item.total,
+      }));
       this.setState({
-        data: res.data.list,
+        data,
       });
     });
   }
 }
 
-export default Form.create({ name: 'horizontal_login' })(Support);
+export default Form.create()(Support);
