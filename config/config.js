@@ -316,12 +316,12 @@ export default {
                 {
                   name: 'list',
                   path: '/viper/list',
-                  component: './editor/flow',
+                  component: './viper/list',
                 },
                 {
                   name: 'card',
                   path: '/viper/card',
-                  component: './editor/mind',
+                  component: './viper/card',
                 }
               ],
             },

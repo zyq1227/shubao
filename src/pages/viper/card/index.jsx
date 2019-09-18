@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './card.less';
+import styles from './index.less';
 import { Input, Button, Table } from 'antd';
 const columns = [
   {
