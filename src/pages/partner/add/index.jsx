@@ -33,7 +33,15 @@ class Add extends Component {
     confirmDirty: false,
     autoCompleteResult: []
   };
-  handleSubmit = () => {};
+  handleSubmit = () => {
+    console.log('校验表格');
+    this.props.form.validateFields((err, value)=>{
+      if (!err){
+        console.log('value...', value);
+      }
+    });
+  };
+
   render() {
     const { getFieldDecorator } = this.props.form;
     const { autoCompleteResult } = this.state;
@@ -116,7 +124,7 @@ class Add extends Component {
           <Content style={{ padding: "24px" }}>
             <Form
               {...formItemLayout}
-              onSubmit={this.handleSubmit}
+              onSubmit={()=>this.handleSubmit()}
               style={{ width: "100%", background: "#fff", padding: "30px" }}
             >
               <Form.Item label="姓名">
@@ -137,6 +145,7 @@ class Add extends Component {
                       message: "The input is not valid E-mail!"
                     },
                     {
+                      required: true,
                       message: "Please input your E-mail!"
                     }
                   ]
